@@ -1,4 +1,4 @@
-# Splitonic
+# Splitonic Manual
 
 **Splitonic** is a real-time harmonic/percussive source separation plugin, available as an Audio Unit (AUv3) for iOS and macOS.
 
