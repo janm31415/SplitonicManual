@@ -10,8 +10,8 @@ It uses the HPSS algorithm - Harmonic/Percussive Source Separation - which works
 
 The input signal goes through an FFT. On the resulting spectrogram, two sliding median filters run in parallel:
 
-- **Horizontal filter** ‚Äî runs along the time axis. A signal that is consistent over time (i.e. tonal/harmonic) will survive this filter. Transients will not.
-- **Vertical filter** ‚Äî runs along the frequency axis. A signal that is consistent across frequency bins (i.e. broadband/percussive) will survive this filter. Narrow tonal content will not.
+- **Horizontal filter** - runs along the time axis. A signal that is consistent over time (i.e. tonal/harmonic) will survive this filter. Transients will not.
+- **Vertical filter** - runs along the frequency axis. A signal that is consistent across frequency bins (i.e. broadband/percussive) will survive this filter. Narrow tonal content will not.
 
 Both filtered versions are compared per bin using the separation threshold, and each bin is assigned to harmonic, percussive, or residual. The output is then reconstructed via overlap-add IFFT synthesis.
 
