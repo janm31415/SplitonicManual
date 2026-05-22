@@ -25,9 +25,9 @@ Each channel has its own set of controls. The channel section is labelled **Left
 
 | Parameter | Range | Default | Description |
 |-----------|-------|---------|-------------|
-| **Harm** | ‚àí18 to +18 dB | 0 dB | Gain applied to the harmonic component. Turn it down to ‚àí18 dB to effectively mute it. |
-| **Perc** | ‚àí18 to +18 dB | 0 dB | Gain applied to the percussive component. |
-| **Res** | ‚àí18 to +18 dB | 0 dB | Gain applied to the residual (what is left after harmonic and percussive separation). |
+| **Harm** | -18 to +18 dB | 0 dB | Gain applied to the harmonic component. Turn it down to ‚àí18 dB to effectively mute it. |
+| **Perc** | -18 to +18 dB | 0 dB | Gain applied to the percussive component. |
+| **Res** | -18 to +18 dB | 0 dB | Gain applied to the residual (what is left after harmonic and percussive separation). |
 | **Thres** | 1 to 10 | 2 | Separation threshold. Higher values make the separation more aggressive ‚Äî bins need a stronger dominance to be classified as harmonic or percussive. Lower values classify more bins, leaving less in the residual. |
 
 ### Filter length section
@@ -43,7 +43,7 @@ These control the size of the median filters used in the separation algorithm.
 
 | Parameter | Range | Default | Description |
 |-----------|-------|---------|-------------|
-| **Gain L/R** | ‚àí18 to +18 dB | 0 dB | Output gain for left and right channels. |
+| **Gain L/R** | -18 to +18 dB | 0 dB | Output gain for left and right channels. |
 | **Mix** | 0 to 100 % | 100 % | Dry/wet mix. At 100 % you hear only the processed signal. At 0 % you hear only the original dry signal. |
 
 ### Latency
@@ -63,7 +63,7 @@ Sets the FFT hop size, which directly determines the processing latency. Smaller
 | Toggle | Options | Description |
 |--------|---------|-------------|
 | **Mode** | Left-Right / Mid-Side | Switches the processing domain. In Mid-Side mode, the Left channel controls apply to the Mid signal and the Right channel controls apply to the Side signal. |
-| **Link** | Link / Unlink | When linked, the left and right channel parameters are coupled ‚Äî changing one side also changes the other. |
+| **Link** | Link / Unlink | When linked, the left and right channel parameters are coupled - changing one side also changes the other. |
 
 ---
 
@@ -75,13 +75,13 @@ The spectrum meter at the top shows the RMS energy per frequency band, separatel
 
 ## Presets
 
-Use the **PRESETS** button to save and load presets. The **‚Äπ** and **‚Ä∫** arrows step through presets sequentially. Presets store all parameter values.
+Use the **PRESETS** button to save and load presets. The **<** and **>** arrows step through presets sequentially. Presets store all parameter values.
 
 ---
 
 ## Tips
 
-- **Isolating drums from a mix**: set Harm and Res gains low (or mute them at ‚àí18 dB), keep Perc at 0 dB. Adjust the horizontal filter length until you get clean transient isolation.
+- **Isolating drums from a mix**: set Harm and Res gains low (or mute them at -18 dB), keep Perc at 0 dB. Adjust the horizontal filter length until you get clean transient isolation.
 - **Removing drums / isolating tonal content**: mute the percussive component, keep harmonic up.
 - **Mid-Side mode**: useful for stereo width processing. The Mid signal typically contains most of the mono content (vocals, kick, bass), while the Side carries room and stereo elements. Separating harmonics from percussion in each of those independently gives quite a bit of creative control.
 - **Latency vs quality**: for mixing and mastering, use 42 or 85 ms for the cleanest separation. For live processing where latency matters, 5 or 10 ms is acceptable but expect some separation artefacts.
@@ -91,7 +91,7 @@ Use the **PRESETS** button to save and load presets. The **‚Äπ** and **‚Ä
 
 ## Platform support
 
-- **iOS**: AUv3 Audio Unit, works in any AUv3-compatible host (AUM, GarageBand, Cubasis, ‚Ä¶)
+- **iOS**: AUv3 Audio Unit, works in any AUv3-compatible host (AUM, GarageBand, Cubasis, ...)
 - **macOS**: AUv3 Audio Unit, works in Logic Pro, GarageBand, Reaper, and other compatible hosts
 
 ---
