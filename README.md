@@ -2,7 +2,7 @@
 
 **Splitonic** is a real-time harmonic/percussive source separation plugin, available as an Audio Unit (AUv3) for iOS and macOS.
 
-It uses the HPSS algorithm ‚Äî Harmonic/Percussive Source Separation ‚Äî which works by analysing the short-time Fourier spectrum and applying two median filters: one along the time axis (to isolate percussive transients) and one along the frequency axis (to isolate harmonic tonal content). What is neither harmonic nor percussive ends up in the residual. You get independent gain control over all three components, per channel.
+It uses the HPSS algorithm - Harmonic/Percussive Source Separation - which works by analysing the short-time Fourier spectrum and applying two median filters: one along the time axis (to isolate percussive transients) and one along the frequency axis (to isolate harmonic tonal content). What is neither harmonic nor percussive ends up in the residual. You get independent gain control over all three components, per channel.
 
 ---
 
