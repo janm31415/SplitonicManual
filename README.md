@@ -98,4 +98,4 @@ Use the **PRESETS** button to save and load presets. The **<** and **>** arrows 
 
 ## License
 
-See the in-app Acknowledgements for third-party library credits.
+See the in-app Acknowledgements for third-party library credits. 
